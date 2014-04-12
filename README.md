@@ -1,6 +1,8 @@
-# Javascript Questions
+# JavaScript Questions
 
 This is a growing collection of JavaScript snippets to ask "advanced" interviewees what the result is.
+
+Feel free to submit pull requests :)
 
 ## Questions
 
@@ -47,48 +49,6 @@ A.
 
 ```javascript
 true
-```
-
-Q. What's the result?
-
-```javascript
-(functino() {
-    return +(new Date())
-})();
-```
-
-A.
-
-```javascript
-1393812837139¬
-```
-
-Q. What's the result?
-
-```javascript
-(functino() {
-    return (new Date()).toString();;
-})();
-```
-
-A.
-
-```javascript
-"Sun Mar 02 2014 18:14:01 GMT-0800 (PST)"¬
-```
-
-Q. What's the result?
-
-```javascript
-(functino() {
-    return (new Date()).valueOf();¬
-})();
-```
-
-A.
-
-```javascript
-1393812845834¬
 ```
 
 Q. What's the result?
@@ -199,6 +159,48 @@ true
 Q. What's the result?
 
 ```javascript
+(functino() {
+    return +(new Date())
+})();
+```
+
+A.
+
+```javascript
+1393812837139¬
+```
+
+Q. What's the result?
+
+```javascript
+(functino() {
+    return (new Date()).toString();
+})();
+```
+
+A.
+
+```javascript
+"Sun Mar 02 2014 18:14:01 GMT-0800 (PST)"
+```
+
+Q. What's the result?
+
+```javascript
+(functino() {
+    return (new Date()).valueOf();
+})();
+```
+
+A.
+
+```javascript
+1393812845834¬
+```
+
+Q. What's the result?
+
+```javascript
 (function() {
     var foo = "a";
     (function(foo) {
@@ -218,14 +220,14 @@ Q. What's the result?
 
 ```javascript
 (function() {
-    return typeof arguments;
-})("a", [1]);
+    return arguments.toString();
+})();
 ```
 
 A.
 
 ```javascript
-"object"
+"[object Arguments]"
 ```
 
 Q. What's the result? (assuming window scope)
@@ -252,6 +254,29 @@ A.
 
 ```javascript
 true
+```
+
+Q. What's the result? (assuming window scope)
+
+```javascript
+(function() {
+    this.bar = "a";
+
+    function foo(bar) {
+        return this.bar || bar;
+    }
+
+    return (function(bar) {
+        return foo.bind(this)(bar);
+    })("b");
+
+}).call(window)
+```
+
+A.
+
+```javascript
+"a"
 ```
 
 ## License
