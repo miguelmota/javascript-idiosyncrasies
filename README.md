@@ -200,20 +200,6 @@ Q. What's the result?
 
 ```javascript
 (functino() {
-    return (new Date()).toString();
-})();
-```
-
-A.
-
-```javascript
-"Sun Mar 02 2014 18:14:01 GMT-0800 (PST)"
-```
-
-Q. What's the result?
-
-```javascript
-(functino() {
     return (new Date()).valueOf();
 })();
 ```
@@ -222,6 +208,20 @@ A.
 
 ```javascript
 1393812845834
+```
+
+Q. What's the result?
+
+```javascript
+(functino() {
+    return (new Date()).toString();
+})();
+```
+
+A.
+
+```javascript
+"Sun Mar 02 2014 18:14:01 GMT-0800 (PST)"
 ```
 
 Q. What's the result?
