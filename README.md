@@ -10,10 +10,10 @@ Q. What's the result?
 
 ```javascript
 (function() {}
-    var arr1 = ["a","b","c","d"]
-    var arr2 = ["z","y","x"]
-    arr1.splice.apply(arr1, [2, 1].concat(arr2));
-    return arr1;
+    var foo = ["a","b","c","d"]
+    var bar = ["z","y","x"]
+    foo.splice.apply(foo, [2, 1].concat(bar));
+    return foo;
 })();
 ```
 
