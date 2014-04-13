@@ -162,21 +162,24 @@ Q. What's the result?
 (function() {
     this.bar = "a";
 
+    function qux(bar) {
+        this.bar = this.bar || bar;
+    }
+
     function foo(bar) {
         return this.bar || bar;
     }
 
     return (function(bar) {
         return foo.bind(this)(bar);
-    })("b");
-
-}).call(window)
+    }).call(new qux("b"), "c");
+})();
 ```
 
 A.
 
 ```javascript
-"a"
+"b"
 ```
 
 Q. What's the result?
@@ -277,6 +280,27 @@ A.
 
 ```javascript
 true
+```
+
+Q. What's the result?
+
+```javascript
+(function() {
+    function Foo() {}
+
+    function Bar() {}
+    Bar.prototype.constructor = Bar;
+
+    Bar.prototype = new Foo();
+
+    return (new Bar()).constructor;
+})()
+```
+
+A.
+
+```javascript
+function Foo() {}
 ```
 
 ## License
