@@ -10,8 +10,8 @@ Q. What's the result?
 
 ```javascript
 (function() {}
-    var foo = ["a","b","c","d"]
-    var bar = ["z","y","x"]
+    var foo = ["a","b","c","d"];
+    var bar = ["z","y","x"];
     foo.splice.apply(foo, [2, 1].concat(bar));
     return foo;
 })();
