@@ -193,7 +193,7 @@ Q. What's the result?
 A.
 
 ```javascript
-1393812837139¬
+1393812837139
 ```
 
 Q. What's the result?
