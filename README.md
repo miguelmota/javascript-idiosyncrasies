@@ -77,7 +77,7 @@ Q. What's the result?
 ```javascript
 (function() {
     function foo() {
-        return "b";
+        return "a";
     }
 
     return foo();
