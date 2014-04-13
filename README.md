@@ -159,6 +159,29 @@ true
 Q. What's the result?
 
 ```javascript
+(function() {
+    this.bar = "a";
+
+    function foo(bar) {
+        return this.bar || bar;
+    }
+
+    return (function(bar) {
+        return foo.bind(this)(bar);
+    })("b");
+
+}).call(window)
+```
+
+A.
+
+```javascript
+"a"
+```
+
+Q. What's the result?
+
+```javascript
 (functino() {
     return +(new Date())
 })();
@@ -254,29 +277,6 @@ A.
 
 ```javascript
 true
-```
-
-Q. What's the result? (assuming window scope)
-
-```javascript
-(function() {
-    this.bar = "a";
-
-    function foo(bar) {
-        return this.bar || bar;
-    }
-
-    return (function(bar) {
-        return foo.bind(this)(bar);
-    })("b");
-
-}).call(window)
-```
-
-A.
-
-```javascript
-"a"
 ```
 
 ## License
