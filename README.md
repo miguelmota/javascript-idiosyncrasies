@@ -294,7 +294,7 @@ Q. What's the result?
     Bar.prototype = new Foo();
 
     return (new Bar()).constructor;
-})()
+})();
 ```
 
 A.
