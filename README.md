@@ -1,6 +1,6 @@
 # JavaScript Questions
 
-This is a growing collection of JavaScript snippets to ask "advanced" interviewees what the result is.
+This is a growing collection of JavaScript snippets to ask interviewees what the result is.
 
 Feel free to submit pull requests :)
 
@@ -40,7 +40,7 @@ A.
 Q. What's the result?
 
 ```javascript
-(functino() {
+(function() {
     return NaN !== NaN;
 })();
 ```
@@ -54,7 +54,7 @@ true
 Q. What's the result?
 
 ```javascript
-(functino() {
+(function() {
     var foo = new Object();
     var bar = new Object();
     var map = new Object();
@@ -146,7 +146,7 @@ Q. What's the result?
 
 ```javascript
 (function() {
-    return typeof null === 'object';
+    return typeof null === "object";
 })();
 ```
 
@@ -185,7 +185,7 @@ A.
 Q. What's the result?
 
 ```javascript
-(functino() {
+(function() {
     return +(new Date())
 })();
 ```
@@ -199,7 +199,7 @@ A.
 Q. What's the result?
 
 ```javascript
-(functino() {
+(function() {
     return (new Date()).valueOf();
 })();
 ```
@@ -213,7 +213,7 @@ A.
 Q. What's the result?
 
 ```javascript
-(functino() {
+(function() {
     return (new Date()).toString();
 })();
 ```
@@ -301,6 +301,22 @@ A.
 
 ```javascript
 function Foo() {}
+```
+
+Q. What's the result?
+
+```
+(function() {
+    return (parseInt("10000000000000000", 10) <
+            parseInt("10000000000000001", 10)
+    );
+})();
+```
+
+A.
+
+```javascript
+false
 ```
 
 ## License
