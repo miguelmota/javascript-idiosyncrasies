@@ -379,7 +379,7 @@ A.
 function Foo() {}
 ```
 
-##### Weird parts of JavaScript
+### Weird parts of JavaScript
 
 Q. What's the result?
 
@@ -480,18 +480,6 @@ A.
 ```javascript
 false
 ```
-
-function random() {
-      console.log(this.foo);
-      }
-
-      var uncurryThis = Function.bind.bind(Function.call);
-
-      var randomcall = uncurryThis(random);
-
-      randomcall({foo: 'foo'});
-
-      //random.call({foo: 'foo'});
 
 ## License
 
