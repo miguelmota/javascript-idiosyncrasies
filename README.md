@@ -244,6 +244,24 @@ A.
 
 Q. What's the result?
 
+```
+(function() {
+    function foo(qux) {
+        return qux || this.foo;
+    }
+
+    return (Function.bind.bind(Function.call)(foo))({foo: 'foo'}, 'qux');
+})();
+```
+
+A.
+
+```javascript
+"qux"
+```
+
+Q. What's the result?
+
 ```javascript
 (function() {
     return arguments.toString();
@@ -286,6 +304,64 @@ Q. What's the result?
 
 ```javascript
 (function() {
+    function always(val) {
+        return function() {
+            return val;
+        };
+    }
+
+    var f = always(function(){});
+    var g = always(function(){});
+
+    return f() === g();
+})();
+```
+
+A.
+
+```javascript
+false
+```
+
+Q. What's the result?
+
+```javascript
+    ['10','10','10','10'].map(parseInt);
+```
+
+A.
+
+```javascript
+[10, NaN, 2, 3]
+```
+
+Q. What's the result?
+
+```javascript
+(function() {
+    var o = {
+        toString: function() {
+            return 'a';
+        },
+        valueOf: function () {
+            return 1;
+        }
+    };
+
+    return o+o;
+})();
+```
+
+A.
+
+```javascript
+2
+```
+
+Q. What's the result?
+
+```javascript
+(function() {
     function Foo() {}
 
     function Bar() {}
@@ -303,6 +379,92 @@ A.
 function Foo() {}
 ```
 
+##### Weird parts of JavaScript
+
+Q. What's the result?
+
+```
+(function() {
+    return ![];
+})();
+```
+
+A.
+
+```javascript
+false
+```
+
+Q. What's the result?
+
+```
+(function() {
+    return +[];
+})();
+```
+
+A.
+
+```javascript
+0
+```
+
+Q. What's the result?
+
+```
+(function() {
+    return +[![]];
+})();
+```
+
+A.
+
+```javascript
+NaN
+```
+
+Q. What's the result?
+
+```
+(function() {
+    return [][[]];
+})();
+```
+
+A.
+
+```javascript
+undefined
+```
+
+Q. What's the result?
+
+```
+(function() {
+    return +!+[];
+})();
+```
+
+A.
+
+```javascript
+1
+```
+
+Q. What's the result?
+
+```
+(function() {
+    return []+[];
+})();
+```
+
+A.
+
+```javascript
+""
+```
+
 Q. What's the result?
 
 ```
@@ -318,6 +480,18 @@ A.
 ```javascript
 false
 ```
+
+function random() {
+      console.log(this.foo);
+      }
+
+      var uncurryThis = Function.bind.bind(Function.call);
+
+      var randomcall = uncurryThis(random);
+
+      randomcall({foo: 'foo'});
+
+      //random.call({foo: 'foo'});
 
 ## License
 
