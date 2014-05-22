@@ -9,51 +9,6 @@ Feel free to submit pull requests :)
 Q. What's the result?
 
 ```javascript
-(function() {}
-    var foo = ["a","b","c","d"];
-    var bar = ["z","y","x"];
-    foo.splice.apply(foo, [2, 1].concat(bar));
-    return foo;
-})();
-```
-
-A.
-
-```javascript
-["a", "b", "z", "y", "x", "d"]
-```
-
-Q. What's the result?
-
-```javascript
-(function() {
-    return (function (a, b) {}).length;
-})();
-```
-
-A.
-
-```javascript
-2
-```
-
-Q. What's the result?
-
-```javascript
-(function() {
-    return NaN !== NaN;
-})();
-```
-
-A.
-
-```javascript
-true
-```
-
-Q. What's the result?
-
-```javascript
 (function() {
     var foo = new Object();
     var bar = new Object();
@@ -70,6 +25,48 @@ A.
 
 ```javascript
 "bar"
+```
+
+Q. What's the result?
+
+```javascript
+function f() {
+    return "foo";
+}
+(function() {
+    if (1 == 0) {
+        function f() {
+            return "bar";
+        }
+    }
+    return f();
+})();
+```
+
+A. ES5
+
+```javascript
+"bar"
+```
+
+A. ES6
+
+```javascript
+"foo"
+```
+
+Q. What's the result?
+
+```javascript
+(function() {
+    return NaN !== NaN;
+})();
+```
+
+A.
+
+```javascript
+true
 ```
 
 Q. What's the result?
@@ -112,6 +109,37 @@ A.
 3
 3
 3
+```
+
+Q. What's the result?
+
+```javascript
+(function() {}
+    var foo = ["a","b","c","d"];
+    var bar = ["z","y","x"];
+    foo.splice.apply(foo, [2, 1].concat(bar));
+    return foo;
+})();
+```
+
+A.
+
+```javascript
+["a", "b", "z", "y", "x", "d"]
+```
+
+Q. What's the result?
+
+```javascript
+(function() {
+    return (function (a, b) {}).length;
+})();
+```
+
+A.
+
+```javascript
+2
 ```
 
 Q. What's the result?
@@ -250,7 +278,7 @@ Q. What's the result?
         return qux || this.foo;
     }
 
-    return (Function.bind.bind(Function.call)(foo))({foo: 'foo'}, 'qux');
+    return (Function.bind.bind(Function.call)(foo))({foo: "foo"}, "qux");
 })();
 ```
 
@@ -278,7 +306,7 @@ Q. What's the result? (assuming window scope)
 
 ```javascript
 var declared = 1;
-Object.getOwnPropertyDescriptor(window, 'declared').configurable;
+Object.getOwnPropertyDescriptor(window, "declared").configurable;
 ```
 
 A.
@@ -291,7 +319,7 @@ Q. What's the result? (assuming window scope)
 
 ```javascript
 declared = 1;
-Object.getOwnPropertyDescriptor(window, 'declared').configurable;
+Object.getOwnPropertyDescriptor(window, "declared").configurable;
 ```
 
 A.
@@ -326,7 +354,7 @@ false
 Q. What's the result?
 
 ```javascript
-    ['10','10','10','10'].map(parseInt);
+    ["10","10","10","10"].map(parseInt);
 ```
 
 A.
@@ -341,7 +369,7 @@ Q. What's the result?
 (function() {
     var o = {
         toString: function() {
-            return 'a';
+            return "a";
         },
         valueOf: function () {
             return 1;
@@ -463,6 +491,20 @@ A.
 
 ```javascript
 ""
+```
+
+Q. What's the result?
+
+```
+(function() {
+    return true + 1;
+})();
+```
+
+A.
+
+```javascript
+2
 ```
 
 Q. What's the result?
