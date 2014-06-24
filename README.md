@@ -132,6 +132,34 @@ Q. What's the result?
 
 ```javascript
 (function() {
+    return ~(-3);
+})();
+```
+
+A.
+
+```javascript
+2
+```
+
+Q. What's the result?
+
+```javascript
+(function() {
+    return ~~(-3.4);
+})();
+```
+
+A.
+
+```javascript
+3
+```
+
+Q. What's the result?
+
+```javascript
+(function() {
     return (function (a, b) {}).length;
 })();
 ```
@@ -342,6 +370,38 @@ Q. What's the result?
     var g = always(function(){});
 
     return f() === g();
+})();
+```
+
+A.
+
+```javascript
+false
+```
+
+Q. What's the result?
+
+```javascript
+(function() {
+    var num1 = 10;
+    var num2 = new Number('10');
+    return num1 === num2;
+})();
+```
+
+A.
+
+```javascript
+false
+```
+
+Q. What's the result?
+
+```javascript
+(function() {
+    var obj1 = { foo: 'bar' };
+    var obj2 = { foo: 'bar' };
+    return obj1 === obj2;
 })();
 ```
 
