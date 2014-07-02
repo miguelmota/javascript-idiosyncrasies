@@ -397,6 +397,20 @@ false
 
 Q. What's the result?
 
+```
+(function() {
+    return [1+1] === [2];
+})()
+```
+
+A.
+
+```
+false
+```
+
+Q. What's the result?
+
 ```javascript
 (function() {
     var obj1 = { foo: 'bar' };
