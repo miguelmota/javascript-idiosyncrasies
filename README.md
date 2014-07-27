@@ -114,23 +114,6 @@ A.
 Q. What's the result?
 
 ```javascript
-(function() {}
-    var foo = ["a","b","c","d"];
-    var bar = ["z","y","x"];
-    foo.splice.apply(foo, [2, 1].concat(bar));
-    return foo;
-})();
-```
-
-A.
-
-```javascript
-["a", "b", "z", "y", "x", "d"]
-```
-
-Q. What's the result?
-
-```javascript
 (function() {
     return ~(-3);
 })();
@@ -236,6 +219,23 @@ A.
 
 ```javascript
 "b"
+```
+
+Q. What's the result?
+
+```javascript
+(function() {}
+    var foo = ["a","b","c","d"];
+    var bar = ["z","y","x"];
+    foo.splice.apply(foo, [2, 1].concat(bar));
+    return foo;
+})();
+```
+
+A.
+
+```javascript
+["a", "b", "z", "y", "x", "d"]
 ```
 
 Q. What's the result?
@@ -480,6 +480,173 @@ A.
 ```javascript
 function Foo() {}
 ```
+
+Q. What's the result?
+
+```javascript
+(function() {
+
+  var f = function g() {
+    return 1;
+  };
+
+  return g();
+
+})();
+```
+
+A.
+
+```javascript
+ReferenceError: g is not defined
+```
+
+[JSBin](http://jsbin.com/pibob/1/edit)
+
+Q. What's the result?
+
+```javascript
+(function() {
+
+  return void (1+1);
+
+})();
+```
+
+A.
+
+```javascript
+undefined
+```
+
+[JSBin](http://jsbin.com/cawiro/1/edit)
+
+Q. What's the result?
+
+```javascript
+(function() {
+
+  var a = [1,2];
+  var b = a;
+
+  a = [1,2];
+
+  return a === b;
+
+})();
+```
+
+A.
+
+```javascript
+false
+```
+
+[JSBin](http://jsbin.com/kucob/1/edit)
+
+Q. What's the result?
+
+```javascript
+(function() {
+    return {foo: 'bar'} === {foo: 'bar'};
+})();
+```
+
+A.
+
+```javascript
+false
+```
+
+[JSBin](http://jsbin.com/meyet/1/edit)
+
+Q. What's the result?
+
+```javascript
+(function() {
+    var questionable = 'outer';
+
+    return (function () {
+        return questionable;
+
+    var questionable = 'inner'
+    })();
+})();
+```
+
+A.
+
+```javascript
+undefined
+```
+
+[JSBin](http://jsbin.com/kesori/1/edit)
+
+Q. What's the result?
+
+```javascript
+(function() {
+    return new String('foo') === 'foo';
+})();
+```
+
+A.
+
+```javascript
+false
+```
+
+[JSBin](http://jsbin.com/femeto/1/edit)
+
+Q. What's the result?
+
+```javascript
+(function(n) {
+    var even = function (num) {
+        return (num === 0) || !(even(num - 1))
+    };
+
+    var _even = even;
+
+    even = void 0;
+
+    return _even(n);
+})(2);
+```
+
+A.
+
+```javascript
+TypeError: undefined is not a function
+```
+
+[JSBin](http://jsbin.com/mopab/1/edit)
+
+Q. What's the result?
+
+```javascript
+(function() {
+    var n;
+
+    function name() {
+        return this.name
+    };
+
+    n = name.bind({name: 'foo'});
+    n.bind({name: 'bar'})
+
+    return n();
+})();
+```
+
+A.
+
+```javascript
+"foo"
+```
+
+[JSBin](http://jsbin.com/mohuf/1/edit)
+
 
 ### Weird parts of JavaScript
 
