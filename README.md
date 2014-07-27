@@ -1,6 +1,6 @@
 # JavaScript Questions
 
-This is a growing collection of JavaScript snippets to ask interviewees what the result is.
+This is a growing collection of JavaScript intricacies.
 
 Feel free to submit pull requests :)
 
