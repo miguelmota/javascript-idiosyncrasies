@@ -1,10 +1,10 @@
-# JavaScript Questions
+# JavaScript Intricacies
 
-This is a growing collection of JavaScript intricacies.
+This is a growing collection of JavaScript intricacies, or things that are not easily understood.
 
 Feel free to submit pull requests :)
 
-## Questions
+## Snippets
 
 Q. What's the result?
 
@@ -330,32 +330,6 @@ A.
 "[object Arguments]"
 ```
 
-Q. What's the result? (assuming window scope)
-
-```javascript
-var declared = 1;
-Object.getOwnPropertyDescriptor(window, "declared").configurable;
-```
-
-A.
-
-```javascript
-false
-```
-
-Q. What's the result? (assuming window scope)
-
-```javascript
-declared = 1;
-Object.getOwnPropertyDescriptor(window, "declared").configurable;
-```
-
-A.
-
-```javascript
-true
-```
-
 Q. What's the result?
 
 ```javascript
@@ -647,6 +621,31 @@ A.
 
 [JSBin](http://jsbin.com/mohuf/1/edit)
 
+Q. What's the result? (assuming window scope)
+
+```javascript
+var declared = 1;
+Object.getOwnPropertyDescriptor(window, "declared").configurable;
+```
+
+A.
+
+```javascript
+false
+```
+
+Q. What's the result? (assuming window scope)
+
+```javascript
+declared = 1;
+Object.getOwnPropertyDescriptor(window, "declared").configurable;
+```
+
+A.
+
+```javascript
+true
+```
 
 ### Weird parts of JavaScript
 
