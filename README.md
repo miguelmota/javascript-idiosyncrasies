@@ -994,22 +994,6 @@ Q. What's the result?
 
 ```
 (function() {
-    return 1 / '';
-})();
-```
-
-A.
-
-```javascript
-Infinity
-```
-
-[JSBin](http://jsbin.com/fepidu/1/edit)
-
-Q. What's the result?
-
-```
-(function() {
     return 0 / '';
 })();
 ```
