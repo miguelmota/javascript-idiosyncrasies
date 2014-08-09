@@ -6,7 +6,7 @@ Good for interview questions. If you can explain *why* the answer is to all ques
 
 Feel free to submit pull requests :)
 
-##
+---
 
 Q. What's the result?
 
