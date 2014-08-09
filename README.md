@@ -1,8 +1,8 @@
-# JavaScript Intricacies
+# JavaScript Idiosyncrasies
 
-This is a growing collection of JavaScript intricacies, or things that are not easily understood.
+This is a growing collection of JavaScript idiosyncrasies, or things that are not easily understood.
 
-Good for interview questions. If you can explain why the answer is to all questions then you are truly a JavaScript ninja.
+Good for interview questions. If you can explain why the answer is to all questions then you are **truly** a JavaScript ninja.
 
 Feel free to submit pull requests :)
 
@@ -1021,6 +1021,38 @@ NaN
 ```
 
 [JSBin](http://jsbin.com/jemeki/1/edit)
+
+Q. What's the result?
+
+```
+(function() {
+    return 1 * null;
+})();
+```
+
+A.
+
+```javascript
+0
+```
+
+[JSBin](http://jsbin.com/xocol/1/edit)
+
+Q. What's the result?
+
+```
+(function() {
+    return new Array() == false;
+})();
+```
+
+A.
+
+```javascript
+true
+```
+
+[JSBin](http://jsbin.com/mexanu/1/edit)
 
 ## License
 
