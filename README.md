@@ -14,8 +14,8 @@ Q. What's the result?
     var bar = new Object();
     var map = new Object();
 
-    map[foo] = "foo";
-    map[bar] = "bar";
+    map[foo] = 'foo';
+    map[bar] = 'bar';
 
     return map[foo];
 })();
@@ -27,33 +27,31 @@ A.
 "bar"
 ```
 
+[JSBin](http://jsbin.com/xogaki/1/edit)
+
 Q. What's the result?
 
 ```javascript
 function f() {
-    return "foo";
+    return 'foo';
 }
 (function() {
     if (1 == 0) {
         function f() {
-            return "bar";
+            return 'bar';
         }
     }
     return f();
 })();
 ```
 
-A. ES5
+A.
 
 ```javascript
 "bar"
 ```
 
-A. ES6
-
-```javascript
-"foo"
-```
+[JSBin](http://jsbin.com/lotavo/1/edit)
 
 Q. What's the result?
 
@@ -69,18 +67,20 @@ A.
 true
 ```
 
+[JSBin](http://jsbin.com/katana/1/edit)
+
 Q. What's the result?
 
 ```javascript
 (function() {
     function foo() {
-        return "a";
+        return 'a';
     }
 
     return foo();
 
     function foo() {
-        return "b";
+        return 'b';
     }
 })();
 ```
@@ -90,6 +90,8 @@ A.
 ```javascript
 "b"
 ```
+
+[JSBin](http://jsbin.com/yutuce/1/edit)
 
 Q. What's the result?
 
@@ -111,6 +113,8 @@ A.
 3
 ```
 
+[JSBin](http://jsbin.com/focobo/1/edit)
+
 Q. What's the result?
 
 ```javascript
@@ -125,6 +129,8 @@ A.
 2
 ```
 
+[JSBin](http://jsbin.com/begehe/1/edit)
+
 Q. What's the result?
 
 ```javascript
@@ -136,8 +142,10 @@ Q. What's the result?
 A.
 
 ```javascript
-3
+-3
 ```
+
+[JSBin](http://jsbin.com/migohi/1/edit)
 
 Q. What's the result?
 
@@ -153,6 +161,8 @@ A.
 2
 ```
 
+[JSBin](http://jsbin.com/rusas/1/edit)
+
 Q. What's the result?
 
 ```javascript
@@ -167,12 +177,14 @@ A.
 1
 ```
 
+[JSBin](http://jsbin.com/roniwu/1/edit)
+
 Q. What's the result?
 
 ```javascript
-(function(foo) {
-    return !!foo
-})("a");
+(function(x) {
+    return !!x
+})('a');
 ```
 
 A.
@@ -181,11 +193,13 @@ A.
 true
 ```
 
+[JSBin](http://jsbin.com/rahuy/1/edit)
+
 Q. What's the result?
 
 ```javascript
 (function() {
-    return typeof null === "object";
+    return typeof null === 'object';
 })();
 ```
 
@@ -195,11 +209,13 @@ A.
 true
 ```
 
+[JSBin](http://jsbin.com/nurihe/3/edit)
+
 Q. What's the result?
 
 ```javascript
 (function() {
-    this.bar = "a";
+    this.bar = 'a';
 
     function qux(bar) {
         this.bar = this.bar || bar;
@@ -211,7 +227,7 @@ Q. What's the result?
 
     return (function(bar) {
         return foo.bind(this)(bar);
-    }).call(new qux("b"), "c");
+    }).call(new qux('b'), 'c');
 })();
 ```
 
@@ -221,12 +237,14 @@ A.
 "b"
 ```
 
+[JSBin](http://jsbin.com/bediq/2/edit)
+
 Q. What's the result?
 
 ```javascript
 (function() {}
-    var foo = ["a","b","c","d"];
-    var bar = ["z","y","x"];
+    var foo = ['a','b','c','d'];
+    var bar = ['z','y','x'];
     foo.splice.apply(foo, [2, 1].concat(bar));
     return foo;
 })();
@@ -237,6 +255,8 @@ A.
 ```javascript
 ["a", "b", "z", "y", "x", "d"]
 ```
+
+[JSBin](http://jsbin.com/qigub/2/edit)
 
 Q. What's the result?
 
@@ -252,6 +272,8 @@ A.
 1393812837139
 ```
 
+[JSBin](http://jsbin.com/lobib/2/edit)
+
 Q. What's the result?
 
 ```javascript
@@ -265,6 +287,8 @@ A.
 ```javascript
 1393812845834
 ```
+
+[JSBin](http://jsbin.com/loxim/1/edit)
 
 Q. What's the result?
 
@@ -280,13 +304,15 @@ A.
 "Sun Mar 02 2014 18:14:01 GMT-0800 (PST)"
 ```
 
+[JSBin](http://jsbin.com/hiheq/1/edit)
+
 Q. What's the result?
 
 ```javascript
 (function() {
-    var foo = "a";
+    var foo = 'a';
     (function(foo) {
-        foo = "b";
+        foo = 'b';
     })(foo);
     return foo;
 })();
@@ -298,6 +324,8 @@ A.
 "a"
 ```
 
+[JSBin](http://jsbin.com/mifiy/1/edit)
+
 Q. What's the result?
 
 ```
@@ -306,7 +334,7 @@ Q. What's the result?
         return qux || this.foo;
     }
 
-    return (Function.bind.bind(Function.call)(foo))({foo: "foo"}, "qux");
+    return (Function.bind.bind(Function.call)(foo))({foo: 'foo'}, 'qux');
 })();
 ```
 
@@ -315,6 +343,8 @@ A.
 ```javascript
 "qux"
 ```
+
+[JSBin](http://jsbin.com/caruye/1/edit)
 
 Q. What's the result?
 
@@ -329,6 +359,8 @@ A.
 ```javascript
 "[object Arguments]"
 ```
+
+[JSBin](http://jsbin.com/foqoc/1/edit)
 
 Q. What's the result?
 
@@ -353,6 +385,8 @@ A.
 false
 ```
 
+[JSBin](http://jsbin.com/yikero/1/edit)
+
 Q. What's the result?
 
 ```javascript
@@ -369,6 +403,8 @@ A.
 false
 ```
 
+[JSBin](http://jsbin.com/jivini/1/edit)
+
 Q. What's the result?
 
 ```
@@ -382,6 +418,8 @@ A.
 ```
 false
 ```
+
+[JSbin](http://jsbin.com/nilagi/1/edit)
 
 Q. What's the result?
 
@@ -399,10 +437,14 @@ A.
 false
 ```
 
+[JSBin](http://jsbin.com/dokej/1/edit)
+
 Q. What's the result?
 
 ```javascript
-    ["10","10","10","10"].map(parseInt);
+(function() {
+    return ['10','10','10','10'].map(parseInt);
+})();
 ```
 
 A.
@@ -411,13 +453,15 @@ A.
 [10, NaN, 2, 3]
 ```
 
+[JSBin](http://jsbin.com/culufi/1/edit)
+
 Q. What's the result?
 
 ```javascript
 (function() {
     var o = {
         toString: function() {
-            return "a";
+            return 'a';
         },
         valueOf: function () {
             return 1;
@@ -433,6 +477,8 @@ A.
 ```javascript
 2
 ```
+
+[JSBin](http://jsbin.com/qinol/1/edit)
 
 Q. What's the result?
 
@@ -454,6 +500,8 @@ A.
 ```javascript
 function Foo() {}
 ```
+
+[JSBin](http://jsbin.com/worug/1/edit)
 
 Q. What's the result?
 
@@ -625,7 +673,7 @@ Q. What's the result?
 
 ```javascript
 (function() {
-    return ("3" > "12") === ("03" > "12");
+    return ('3' > '12') === ('03' > '12');
 })();
 ```
 
@@ -689,7 +737,7 @@ Q. What's the result? (assuming window scope)
 
 ```javascript
 var declared = 1;
-Object.getOwnPropertyDescriptor(window, "declared").configurable;
+Object.getOwnPropertyDescriptor(window, 'declared').configurable;
 ```
 
 A.
@@ -702,7 +750,7 @@ Q. What's the result? (assuming window scope)
 
 ```javascript
 declared = 1;
-Object.getOwnPropertyDescriptor(window, "declared").configurable;
+Object.getOwnPropertyDescriptor(window, 'declared').configurable;
 ```
 
 A.
@@ -727,6 +775,8 @@ A.
 false
 ```
 
+[JSBin](http://jsbin.com/puyap/1/edit)
+
 Q. What's the result?
 
 ```
@@ -740,6 +790,8 @@ A.
 ```javascript
 0
 ```
+
+[JSBin](http://jsbin.com/huboca/1/edit)
 
 Q. What's the result?
 
@@ -755,6 +807,8 @@ A.
 NaN
 ```
 
+[JSBin](http://jsbin.com/fusine/1/edit)
+
 Q. What's the result?
 
 ```
@@ -768,6 +822,8 @@ A.
 ```javascript
 undefined
 ```
+
+[JSBin](http://jsbin.com/vetiba/1/edit)
 
 Q. What's the result?
 
@@ -783,6 +839,8 @@ A.
 1
 ```
 
+[JSBin](http://jsbin.com/dulih/1/edit)
+
 Q. What's the result?
 
 ```
@@ -797,6 +855,8 @@ A.
 ""
 ```
 
+[JSBin](http://jsbin.com/lekun/1/edit)
+
 Q. What's the result?
 
 ```
@@ -810,6 +870,8 @@ A.
 ```javascript
 2
 ```
+
+[JSBin](http://jsbin.com/femicu/1/edit)
 
 Q. What's the result?
 
@@ -831,8 +893,8 @@ Q. What's the result?
 
 ```
 (function() {
-    return (parseInt("10000000000000000", 10) <
-            parseInt("10000000000000001", 10)
+    return (parseInt('10000000000000000', 10) <
+            parseInt('10000000000000001', 10)
     );
 })();
 ```
@@ -842,6 +904,24 @@ A.
 ```javascript
 false
 ```
+
+[JSBin](http://jsbin.com/yociz/1/edit)
+
+Q. What's the result?
+
+```
+(function() {
+    return (0.1).toFixed(20);
+})();
+```
+
+A.
+
+```javascript
+"0.10000000000000000555"
+```
+
+[JSBin](http://jsbin.com/vewuge/1/edit)
 
 Q. What's the result?
 
