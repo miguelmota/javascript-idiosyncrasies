@@ -619,7 +619,71 @@ A.
 "foo"
 ```
 
+[JSBin](http://jsbin.com/yokaw/1/edit)
+
+Q. What's the result?
+
+```javascript
+(function() {
+    return ("3" > "12") === ("03" > "12");
+})();
+```
+
+A.
+
+```javascript
+false
+```
+
 [JSBin](http://jsbin.com/mohuf/1/edit)
+
+Q. What's the result?
+
+```javascript
+(function() {
+    return Math.pow(2,53) === (Math.pow(2,53) + 1);
+}();
+```
+
+A.
+
+```javascript
+true
+```
+
+[JSBin](http://jsbin.com/warowo/1/edit)
+
+Q. What's the result?
+
+```javascript
+(function() {
+    return Math.pow(2,1024) === Infinity;
+}();
+```
+
+A.
+
+```javascript
+true
+```
+
+[JSBin](http://jsbin.com/xozim/1/edit)
+
+Q. What's the result?
+
+```javascript
+(function() {
+    return (Infinity - 100) === Infinity;
+}();
+```
+
+A.
+
+```javascript
+true
+```
+
+[JSBin](http://jsbin.com/dijiqo/1/edit)
 
 Q. What's the result? (assuming window scope)
 
@@ -751,6 +815,22 @@ Q. What's the result?
 
 ```
 (function() {
+    return 0.06 + 0.01;
+})();
+```
+
+A.
+
+```javascript
+0.06999999999999999
+```
+
+[JSBin](http://jsbin.com/lirac/1/edit)
+
+Q. What's the result?
+
+```
+(function() {
     return (parseInt("10000000000000000", 10) <
             parseInt("10000000000000001", 10)
     );
@@ -762,6 +842,54 @@ A.
 ```javascript
 false
 ```
+
+Q. What's the result?
+
+```
+(function() {
+    return 1 / '';
+})();
+```
+
+A.
+
+```javascript
+Infinity
+```
+
+[JSBin](http://jsbin.com/fepidu/1/edit)
+
+Q. What's the result?
+
+```
+(function() {
+    return 1 / '';
+})();
+```
+
+A.
+
+```javascript
+Infinity
+```
+
+[JSBin](http://jsbin.com/fepidu/1/edit)
+
+Q. What's the result?
+
+```
+(function() {
+    return 0 / '';
+})();
+```
+
+A.
+
+```javascript
+NaN
+```
+
+[JSBin](http://jsbin.com/jemeki/1/edit)
 
 ## License
 
