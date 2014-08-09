@@ -2,6 +2,8 @@
 
 This is a growing collection of JavaScript intricacies, or things that are not easily understood.
 
+Good for interview questions. If you can explain why the answer is to all questions then you are truly a JavaScript ninja.
+
 Feel free to submit pull requests :)
 
 ## Snippets
@@ -732,6 +734,55 @@ true
 ```
 
 [JSBin](http://jsbin.com/dijiqo/1/edit)
+
+Q. What's the result?
+
+```
+(function() {
+    return (0.1 + 0.2 === 0.3);
+})();
+```
+
+A.
+
+```javascript
+false
+```
+
+[JSBin](http://jsbin.com/nedupi/1/edit)
+
+Q. What's the result?
+
+```
+(function() {
+    return parseFloat('3.3.4');
+})();
+```
+
+A.
+
+```javascript
+3.3
+```
+
+[JSBin](http://jsbin.com/wuxobi/1/edit)
+
+Q. What's the result?
+
+```
+(function() {
+    return 010;
+})();
+```
+
+A.
+
+```javascript
+8
+```
+
+[JSBin](http://jsbin.com/sugewu/1/edit)
+
 
 Q. What's the result? (assuming window scope)
 
