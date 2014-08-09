@@ -2,7 +2,7 @@
 
 This is a growing collection of JavaScript idiosyncrasies, or things that are not easily understood.
 
-Good for interview questions. If you can explain why the answer is to all questions then you are **truly** a JavaScript ninja.
+Good for interview questions. If you can explain *why* the answer is to all questions then you are *truly* a JavaScript ninja.
 
 Feel free to submit pull requests :)
 
