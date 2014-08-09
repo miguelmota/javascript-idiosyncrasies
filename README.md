@@ -6,7 +6,7 @@ Good for interview questions. If you can explain *why* the answer is to all ques
 
 Feel free to submit pull requests :)
 
-## Snippets
+##
 
 Q. What's the result?
 
@@ -1054,6 +1054,6 @@ true
 
 [JSBin](http://jsbin.com/mexanu/1/edit)
 
-## License
+# License
 
 Released under the MIT License.
