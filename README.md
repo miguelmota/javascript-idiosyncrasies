@@ -593,7 +593,7 @@ Q. What's the result?
     return (function () {
         return questionable;
 
-    var questionable = 'inner'
+        var questionable = 'inner';
     })();
 })();
 ```
