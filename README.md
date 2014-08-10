@@ -120,6 +120,23 @@ A.
 Q. What's the result?
 
 ```javascript
+(function(a, b) {
+  arguments[1] = 3;
+  return b;
+})(1, 2);
+```
+
+A.
+
+```javascript
+3
+```
+
+[JSBin](http://jsbin.com/hajus/1/edit)
+
+Q. What's the result?
+
+```javascript
 (function() {
     return ~(-3);
 })();
