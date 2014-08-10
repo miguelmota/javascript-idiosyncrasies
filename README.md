@@ -2,7 +2,7 @@
 
 This is a growing collection of JavaScript idiosyncrasies, or things that are not easily understood.
 
-If you can explain *why* the answer is to all questions then you are truly a JavaScript ninja. Some of these are just to confuse the reader, and by no means encourage best practices and should never be seen in production code. It's simply to demonstrate the good and bad parts of JavaScript.
+If you can explain *why* the answer is to all questions then you are truly a JavaScript ninja. Some of these are just to confuse the reader, and by no means encourage best practices and should never be seen in production code. It's simply to demonstrate the good and *bad* parts of JavaScript.
 
 Feel free to submit pull requests :)
 
