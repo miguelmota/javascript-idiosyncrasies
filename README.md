@@ -38,7 +38,7 @@ function f() {
     return 'foo';
 }
 (function() {
-    if (1 == 0) {
+    if (1 === 0) {
         function f() {
             return 'bar';
         }
