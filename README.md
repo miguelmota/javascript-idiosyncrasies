@@ -186,7 +186,7 @@ A.
 2
 ```
 
-[JSBin](http://jsbin.com/dahaw/1/edit) | [JSBin](http://jsbin.com/heteg/1/edit)
+[JSBin](http://jsbin.com/dahaw/1/edit) | [JSBin explained](http://jsbin.com/heteg/1/edit)
 
 Q. What's the result?
 
