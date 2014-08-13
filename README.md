@@ -191,6 +191,23 @@ A.
 Q. What's the result?
 
 ```javascript
+(function(undefined) {
+  var foo;
+  return foo === undefined;
+})(true);
+```
+
+A.
+
+```javascript
+false
+```
+
+[JSBin](http://jsbin.com/vurego/1/edit) | [JSBin](http://jsbin.com/qabuye/1/edit)
+
+Q. What's the result?
+
+```javascript
 (function(n) {
     return ~(n);
 })(-3);
@@ -282,13 +299,13 @@ A.
 1393812845834
 ```
 
-[JSBin](http://jsbin.com/loxim/1/edit)
+[JSBin](http://jsbin.com/loxim/1/edit) | [JSBin explained](http://jsbin.com/cigis/1/edit)
 
 Q. What's the result?
 
 ```javascript
 (function() {
-    return (new Date()).toString();
+    return ''+(new Date());
 })();
 ```
 
@@ -298,7 +315,7 @@ A.
 "Sun Mar 02 2014 18:14:01 GMT-0800 (PST)"
 ```
 
-[JSBin](http://jsbin.com/hiheq/1/edit)
+[JSBin](http://jsbin.com/hiheq/2/edit) | [JSBin explained](http://jsbin.com/yirey/1/edit)
 
 Q. What's the result?
 
@@ -318,27 +335,7 @@ A.
 "a"
 ```
 
-[JSBin](http://jsbin.com/mifiy/1/edit)
-
-Q. What's the result?
-
-```
-(function() {
-    function foo(qux) {
-        return qux || this.foo;
-    }
-
-    return (Function.bind.bind(Function.call)(foo))({foo: 'foo'}, 'qux');
-})();
-```
-
-A.
-
-```javascript
-"qux"
-```
-
-[JSBin](http://jsbin.com/caruye/1/edit)
+[JSBin](http://jsbin.com/mifiy/1/edit) | [JSBin explained](http://jsbin.com/pegavu/1/edit)
 
 Q. What's the result?
 
@@ -354,7 +351,7 @@ A.
 "[object Arguments]"
 ```
 
-[JSBin](http://jsbin.com/foqoc/1/edit)
+[JSBin](http://jsbin.com/foqoc/1/edit) | [JSBin explained](http://jsbin.com/sojow/1/edit)
 
 Q. What's the result?
 
