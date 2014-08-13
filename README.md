@@ -29,7 +29,7 @@ A.
 "bar"
 ```
 
-[JSBin](http://jsbin.com/xogaki/1/edit)
+[JSBin](http://jsbin.com/xogaki/1/edit) | [JSBin explained](http://jsbin.com/kadoko/1/edit)
 
 Q. What's the result?
 
@@ -53,23 +53,23 @@ A.
 "bar"
 ```
 
-[JSBin](http://jsbin.com/lotavo/1/edit)
+[JSBin](http://jsbin.com/lotavo/1/edit) | [JSBin explained](http://jsbin.com/xezad/1/edit)
 
 Q. What's the result?
 
 ```javascript
 (function() {
-    return NaN !== NaN;
+    return NaN === NaN;
 })();
 ```
 
 A.
 
 ```javascript
-true
+false
 ```
 
-[JSBin](http://jsbin.com/katana/1/edit)
+[JSBin](http://jsbin.com/katana/2/edit) | [JSBin explained](http://jsbin.com/xorix/1/edit)
 
 Q. What's the result?
 
@@ -93,7 +93,7 @@ A.
 "b"
 ```
 
-[JSBin](http://jsbin.com/yutuce/1/edit)
+[JSBin](http://jsbin.com/yutuce/1/edit) | [JSBin explained](http://jsbin.com/qemuf/1/edit)
 
 Q. What's the result?
 
@@ -115,7 +115,7 @@ A.
 3
 ```
 
-[JSBin](http://jsbin.com/focobo/1/edit)
+[JSBin](http://jsbin.com/focobo/1/edit) | [JSBin explained](http://jsbin.com/lopoh/1/edit)
 
 Q. What's the result?
 
@@ -132,14 +132,32 @@ A.
 3
 ```
 
-[JSBin](http://jsbin.com/hajus/1/edit)
+[JSBin](http://jsbin.com/hajus/1/edit) | [JSBin explained](http://jsbin.com/yulahi/1/edit)
 
 Q. What's the result?
 
 ```javascript
-(function() {
-    return ~(-3);
-})();
+(function(a, b, c) {
+  delete arguments[0];
+
+  return arguments.length;
+})(1, 2, 3);
+```
+
+A.
+
+```javascript
+3
+```
+
+[JSBin](http://jsbin.com/gicij/1/edit) | [JSBin explained](http://jsbin.com/xobap/1/edit)
+
+Q. What's the result?
+
+```javascript
+(function(n) {
+    return ~(n);
+})(-3);
 ```
 
 A.
@@ -148,7 +166,7 @@ A.
 2
 ```
 
-[JSBin](http://jsbin.com/begehe/1/edit)
+[JSBin](http://jsbin.com/begehe/1/edit) | [JSBin explained](http://jsbin.com/buzabo/1/edit)
 
 Q. What's the result?
 
@@ -1053,7 +1071,7 @@ A.
 true
 ```
 
-[JSBin](http://jsbin.com/mexanu/1/edit)
+[JSBin](http://jsbin.com/mexanu/1/edit) | [JSBin explained](http://jsbin.com/tizagi/1/edit)
 
 # License
 
