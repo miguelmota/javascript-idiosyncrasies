@@ -155,6 +155,42 @@ A.
 Q. What's the result?
 
 ```javascript
+(function() {
+    return (function (a, b) {}).length;
+})();
+```
+
+A.
+
+```javascript
+2
+```
+
+[JSBin](http://jsbin.com/rusas/1/edit) | [JSBin explained](http://jsbin.com/cofam/1/edit)
+
+Q. What's the result?
+
+```javascript
+(function(a, b) {
+   var foo, bar;
+
+   foo = (bar = a, b);
+
+   return foo;
+})(1, 2);
+```
+
+A.
+
+```javascript
+2
+```
+
+[JSBin](http://jsbin.com/dahaw/1/edit) | [JSBin](http://jsbin.com/heteg/1/edit)
+
+Q. What's the result?
+
+```javascript
 (function(n) {
     return ~(n);
 })(-3);
@@ -171,56 +207,24 @@ A.
 Q. What's the result?
 
 ```javascript
-(function() {
-    return ~~(-3.4);
-})();
+(function(n) {
+    return ~~n;
+})(-1.5);
 ```
 
 A.
 
 ```javascript
--3
+-1
 ```
 
-[JSBin](http://jsbin.com/migohi/1/edit)
-
-Q. What's the result?
-
-```javascript
-(function() {
-    return (function (a, b) {}).length;
-})();
-```
-
-A.
-
-```javascript
-2
-```
-
-[JSBin](http://jsbin.com/rusas/1/edit)
-
-Q. What's the result?
-
-```javascript
-(function(num) {
-    return ~~num;
-})(1.5);
-```
-
-A.
-
-```javascript
-1
-```
-
-[JSBin](http://jsbin.com/roniwu/1/edit)
+[JSBin](http://jsbin.com/roniwu/2/edit) | [JSBin explained](http://jsbin.com/kijuze/1/edit)
 
 Q. What's the result?
 
 ```javascript
 (function(x) {
-    return !!x
+    return !!x;
 })('a');
 ```
 
@@ -230,70 +234,23 @@ A.
 true
 ```
 
-[JSBin](http://jsbin.com/rahuy/1/edit)
+[JSBin](http://jsbin.com/rahuy/1/edit) | [JSBin explained](http://jsbin.com/yegix/1/edit)
 
 Q. What's the result?
 
 ```javascript
 (function() {
-    return typeof null === 'object';
+    return typeof null === 'null';
 })();
 ```
 
 A.
 
 ```javascript
-true
+false
 ```
 
-[JSBin](http://jsbin.com/nurihe/3/edit)
-
-Q. What's the result?
-
-```javascript
-(function() {
-    this.bar = 'a';
-
-    function qux(bar) {
-        this.bar = this.bar || bar;
-    }
-
-    function foo(bar) {
-        return this.bar || bar;
-    }
-
-    return (function(bar) {
-        return foo.bind(this)(bar);
-    }).call(new qux('b'), 'c');
-})();
-```
-
-A.
-
-```javascript
-"b"
-```
-
-[JSBin](http://jsbin.com/bediq/2/edit)
-
-Q. What's the result?
-
-```javascript
-(function() {}
-    var foo = ['a','b','c','d'];
-    var bar = ['z','y','x'];
-    foo.splice.apply(foo, [2, 1].concat(bar));
-    return foo;
-})();
-```
-
-A.
-
-```javascript
-["a", "b", "z", "y", "x", "d"]
-```
-
-[JSBin](http://jsbin.com/qigub/2/edit)
+[JSBin](http://jsbin.com/nurihe/5/edit) | [JSBin explained](http://jsbin.com/yeroke/1/edit)
 
 Q. What's the result?
 
@@ -309,7 +266,7 @@ A.
 1393812837139
 ```
 
-[JSBin](http://jsbin.com/lobib/2/edit)
+[JSBin](http://jsbin.com/lobib/2/edit) | [JSBin explained](http://jsbin.com/viwoba/1/edit)
 
 Q. What's the result?
 
@@ -1071,7 +1028,7 @@ A.
 true
 ```
 
-[JSBin](http://jsbin.com/mexanu/1/edit) | [JSBin explained](http://jsbin.com/tizagi/1/edit)
+[JSBin](http://jsbin.com/mexanu/1/edit) | [JSBin explained](http://jsbin.com/tizagi/2/edit)
 
 # License
 
