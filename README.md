@@ -113,7 +113,7 @@ A.
 3
 ```
 
-[JSBin](http://jsbin.com/focobo/1/edit) | [JSBin explained](http://jsbin.com/lopoh/1/edit)
+[JSBin](http://jsbin.com/focobo/1/edit) | [JSBin explained](http://jsbin.com/lopoh/2/edit)
 
 Q. What's the result?
 
