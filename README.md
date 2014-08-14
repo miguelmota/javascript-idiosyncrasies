@@ -373,10 +373,7 @@ Q. What's the result?
 
 ```javascript
 (function(n) {
-    var num1 = n,
-        num2 = new Number(n);
-
-    return num1 === num2;
+    return n === new Number(n);
 })(10);
 ```
 
@@ -387,6 +384,22 @@ false
 ```
 
 [JSBin](http://jsbin.com/jivini/1/edit) | [JSBin explained](http://jsbin.com/titemi/1/edit)
+
+Q. What's the result?
+
+```javascript
+(function(x) {
+    return new String(x) === x;
+})('a');
+```
+
+A.
+
+```javascript
+false
+```
+
+[JSBin](http://jsbin.com/femeto/1/edit) | [JSBin explained](http://jsbin.com/xelado/1/edit)
 
 Q. What's the result?
 
@@ -529,28 +542,12 @@ Q. What's the result?
 
 ```javascript
 (function() {
-    return {foo: 'bar'} === {foo: 'bar'};
-})();
-```
-
-A.
-
-```javascript
-false
-```
-
-[JSBin](http://jsbin.com/meyet/1/edit)
-
-Q. What's the result?
-
-```javascript
-(function() {
-    var questionable = 'outer';
+    var x = 1;
 
     return (function () {
-        return questionable;
+        return x;
 
-        var questionable = 'inner';
+        var x = 2;
     })();
 })();
 ```
@@ -561,23 +558,7 @@ A.
 undefined
 ```
 
-[JSBin](http://jsbin.com/kesori/1/edit)
-
-Q. What's the result?
-
-```javascript
-(function() {
-    return new String('foo') === 'foo';
-})();
-```
-
-A.
-
-```javascript
-false
-```
-
-[JSBin](http://jsbin.com/femeto/1/edit)
+[JSBin](http://jsbin.com/kesori/1/edit) | [JSBin explained](http://jsbin.com/zabat/1/edit)
 
 Q. What's the result?
 
@@ -601,7 +582,7 @@ A.
 TypeError: undefined is not a function
 ```
 
-[JSBin](http://jsbin.com/mopab/1/edit)
+[JSBin](http://jsbin.com/mopab/1/edit) | [JSBin explained](http://jsbin.com/sisari/2/edit)
 
 Q. What's the result?
 
@@ -614,7 +595,7 @@ Q. What's the result?
     };
 
     n = name.bind({name: 'foo'});
-    n.bind({name: 'bar'})
+    n = n.bind({name: 'bar'})
 
     return n();
 })();
@@ -626,7 +607,7 @@ A.
 "foo"
 ```
 
-[JSBin](http://jsbin.com/yokaw/1/edit)
+[JSBin](http://jsbin.com/yokaw/1/edit) | [JSBin explained](http://jsbin.com/biruk/1/edit)
 
 Q. What's the result?
 
@@ -977,7 +958,7 @@ A.
 0
 ```
 
-[JSBin](http://jsbin.com/xocol/1/edit)
+[JSBin](http://jsbin.com/xocol/1/edit) | [JSBin explained](http://jsbin.com/kuhec/1/edit)
 
 Q. What's the result?
 
