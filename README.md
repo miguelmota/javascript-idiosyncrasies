@@ -739,8 +739,6 @@ false
 
 [JSBin](http://jsbin.com/cowoji/1/edit) | [JSBin explained](http://jsbin.com/ceriwu/1/edit)
 
-### Weird parts of JavaScript
-
 Q. What's the result?
 
 ```
@@ -755,7 +753,7 @@ A.
 false
 ```
 
-[JSBin](http://jsbin.com/puyap/1/edit)
+[JSBin](http://jsbin.com/puyap/1/edit) | [JSBin explained](http://jsbin.com/mavicu/1/edit)
 
 Q. What's the result?
 
@@ -771,23 +769,7 @@ A.
 0
 ```
 
-[JSBin](http://jsbin.com/huboca/1/edit)
-
-Q. What's the result?
-
-```
-(function() {
-    return +[![]];
-})();
-```
-
-A.
-
-```javascript
-NaN
-```
-
-[JSBin](http://jsbin.com/fusine/1/edit)
+[JSBin](http://jsbin.com/huboca/1/edit) | [JSBin explained](http://jsbin.com/xudanu/1/edit)
 
 Q. What's the result?
 
