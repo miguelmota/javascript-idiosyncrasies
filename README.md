@@ -357,16 +357,7 @@ Q. What's the result?
 
 ```javascript
 (function() {
-    function always(val) {
-        return function() {
-            return val;
-        };
-    }
-
-    var f = always(function(){});
-    var g = always(function(){});
-
-    return f() === g();
+    return (function(){}) === (function(){});
 })();
 ```
 
@@ -376,16 +367,17 @@ A.
 false
 ```
 
-[JSBin](http://jsbin.com/yikero/1/edit)
+[JSBin](http://jsbin.com/yikero/2/edit) | [JSBin explained](http://jsbin.com/cuzub/1/edit)
 
 Q. What's the result?
 
 ```javascript
-(function() {
-    var num1 = 10;
-    var num2 = new Number('10');
+(function(n) {
+    var num1 = n,
+        num2 = new Number(n);
+
     return num1 === num2;
-})();
+})(10);
 ```
 
 A.
@@ -394,7 +386,7 @@ A.
 false
 ```
 
-[JSBin](http://jsbin.com/jivini/1/edit)
+[JSBin](http://jsbin.com/jivini/1/edit) | [JSBin explained](http://jsbin.com/titemi/1/edit)
 
 Q. What's the result?
 
@@ -410,14 +402,15 @@ A.
 false
 ```
 
-[JSbin](http://jsbin.com/nilagi/1/edit)
+[JSbin](http://jsbin.com/nilagi/1/edit) | [JSBin explained](http://jsbin.com/nezow/1/edit)
 
 Q. What's the result?
 
 ```javascript
 (function() {
-    var obj1 = { foo: 'bar' };
-    var obj2 = { foo: 'bar' };
+    var obj1 = { foo: 'bar' },
+        obj2 = { foo: 'bar' };
+
     return obj1 === obj2;
 })();
 ```
@@ -428,7 +421,7 @@ A.
 false
 ```
 
-[JSBin](http://jsbin.com/dokej/1/edit)
+[JSBin](http://jsbin.com/dokej/1/edit)| [JSBin explained](http://jsbin.com/kocoma/1/edit)
 
 Q. What's the result?
 
@@ -444,7 +437,7 @@ A.
 [10, NaN, 2, 3]
 ```
 
-[JSBin](http://jsbin.com/culufi/1/edit)
+[JSBin](http://jsbin.com/culufi/1/edit) | [JSBin explained](http://jsbin.com/zuyuv/1/edit)
 
 Q. What's the result?
 
@@ -459,7 +452,7 @@ Q. What's the result?
         }
     };
 
-    return o+o;
+    return o + o;
 })();
 ```
 
@@ -469,30 +462,7 @@ A.
 2
 ```
 
-[JSBin](http://jsbin.com/qinol/1/edit)
-
-Q. What's the result?
-
-```javascript
-(function() {
-    function Foo() {}
-
-    function Bar() {}
-    Bar.prototype.constructor = Bar;
-
-    Bar.prototype = new Foo();
-
-    return (new Bar()).constructor;
-})();
-```
-
-A.
-
-```javascript
-function Foo() {}
-```
-
-[JSBin](http://jsbin.com/worug/1/edit)
+[JSBin](http://jsbin.com/qinol/1/edit) | [JSBin explained](http://jsbin.com/wizemo/1/edit)
 
 Q. What's the result?
 
