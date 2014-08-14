@@ -778,7 +778,7 @@ Q. What's the result?
 A.
 
 ```javascript
-3
+2
 ```
 
 [JSBin](http://jsbin.com/tujig/1/edit) | [JSBin explained](http://jsbin.com/redup/1/edit)
