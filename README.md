@@ -691,6 +691,22 @@ Q. What's the result?
 
 ```
 (function() {
+    return (0.1).toFixed(20);
+})();
+```
+
+A.
+
+```javascript
+"0.10000000000000000555"
+```
+
+[JSBin](http://jsbin.com/vewuge/1/edit) | [JSBin explained](http://jsbin.com/lupaxi/1/edit)
+
+Q. What's the result?
+
+```
+(function() {
     return parseFloat('3.3.4');
 })();
 ```
@@ -718,6 +734,24 @@ A.
 ```
 
 [JSBin](http://jsbin.com/sugewu/1/edit) | [JSBin explained](http://jsbin.com/disuzo/1/edit)
+
+Q. What's the result?
+
+```
+(function() {
+    return (parseInt('10000000000000000', 10) ===
+            parseInt('10000000000000001', 10)
+    );
+})();
+```
+
+A.
+
+```javascript
+true
+```
+
+[JSBin](http://jsbin.com/yociz/1/edit) | [JSBin explained](http://jsbin.com/jefera/1/edit)
 
 
 Q. What's the result? (assuming window scope)
@@ -785,7 +819,7 @@ A.
 undefined
 ```
 
-[JSBin](http://jsbin.com/vetiba/1/edit)
+[JSBin](http://jsbin.com/vetiba/1/edit) | [JSBin explained](http://jsbin.com/kojiv/1/edit)
 
 Q. What's the result?
 
@@ -801,7 +835,7 @@ A.
 1
 ```
 
-[JSBin](http://jsbin.com/dulih/1/edit)
+[JSBin](http://jsbin.com/dulih/1/edit) | [JSBin explained](http://jsbin.com/veruri/1/edit)
 
 Q. What's the result?
 
@@ -817,7 +851,7 @@ A.
 ""
 ```
 
-[JSBin](http://jsbin.com/lekun/1/edit)
+[JSBin](http://jsbin.com/lekun/1/edit) | [JSBin explained](http://jsbin.com/xukis/1/edit)
 
 Q. What's the result?
 
@@ -833,57 +867,7 @@ A.
 2
 ```
 
-[JSBin](http://jsbin.com/femicu/1/edit)
-
-Q. What's the result?
-
-```
-(function() {
-    return 0.06 + 0.01;
-})();
-```
-
-A.
-
-```javascript
-0.06999999999999999
-```
-
-[JSBin](http://jsbin.com/lirac/1/edit)
-
-Q. What's the result?
-
-```
-(function() {
-    return (parseInt('10000000000000000', 10) <
-            parseInt('10000000000000001', 10)
-    );
-})();
-```
-
-A.
-
-```javascript
-false
-```
-
-[JSBin](http://jsbin.com/yociz/1/edit)
-
-Q. What's the result?
-
-```
-(function() {
-    return (0.1).toFixed(20);
-})();
-```
-
-A.
-
-```javascript
-"0.10000000000000000555"
-```
-
-[JSBin](http://jsbin.com/vewuge/1/edit)
+[JSBin](http://jsbin.com/femicu/1/edit) | [JSBin explained](http://jsbin.com/cotaf/1/edit)
 
 Q. What's the result?
 
@@ -899,23 +883,7 @@ A.
 Infinity
 ```
 
-[JSBin](http://jsbin.com/fepidu/1/edit)
-
-Q. What's the result?
-
-```
-(function() {
-    return 0 / '';
-})();
-```
-
-A.
-
-```javascript
-NaN
-```
-
-[JSBin](http://jsbin.com/jemeki/1/edit)
+[JSBin](http://jsbin.com/fepidu/1/edit) | [JSBin explained](http://jsbin.com/hofutu/1/edit)
 
 Q. What's the result?
 
