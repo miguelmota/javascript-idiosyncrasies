@@ -2,9 +2,7 @@
 
 This is a growing collection of some JavaScript idiosyncrasies, and a few things that might not be well recognized so I want to make aware.
 
-If you can explain *why* the answer is to all questions then you are truly a JavaScript ninja. Some of these are just to confuse the reader, and by no means encourage best practices and should never be seen in production code. It's simply to demonstrate the *good* and *bad* parts of JavaScript.
-
-Feel free to submit pull requests :)
+Some of these are just to confuse the reader, and by no means encourage best practices and should never be seen in production code. It's simply to demonstrate the *good* and *bad* parts of JavaScript.
 
 ---
 
@@ -623,7 +621,7 @@ A.
 false
 ```
 
-[JSBin](http://jsbin.com/mohuf/1/edit)
+[JSBin](http://jsbin.com/mohuf/1/edit) | [JSBin explained](http://jsbin.com/pileko/1/edit)
 
 Q. What's the result?
 
@@ -639,7 +637,7 @@ A.
 true
 ```
 
-[JSBin](http://jsbin.com/warowo/1/edit)
+[JSBin](http://jsbin.com/warowo/1/edit) | [JSBin explained](http://jsbin.com/sudut/1/edit)
 
 Q. What's the result?
 
@@ -655,7 +653,7 @@ A.
 true
 ```
 
-[JSBin](http://jsbin.com/xozim/1/edit)
+[JSBin](http://jsbin.com/xozim/1/edit) | [JSBin explained](http://jsbin.com/vohoco/1/edit)
 
 Q. What's the result?
 
@@ -671,7 +669,7 @@ A.
 true
 ```
 
-[JSBin](http://jsbin.com/dijiqo/1/edit)
+[JSBin](http://jsbin.com/dijiqo/1/edit) | [JSBin explained](http://jsbin.com/wefaw/1/edit)
 
 Q. What's the result?
 
@@ -687,7 +685,7 @@ A.
 false
 ```
 
-[JSBin](http://jsbin.com/nedupi/1/edit)
+[JSBin](http://jsbin.com/nedupi/1/edit) | [JSBin explained](http://jsbin.com/fuwuz/1/edit)
 
 Q. What's the result?
 
@@ -703,7 +701,7 @@ A.
 3.3
 ```
 
-[JSBin](http://jsbin.com/wuxobi/1/edit)
+[JSBin](http://jsbin.com/wuxobi/1/edit) | [JSBin explained](http://jsbin.com/letef/1/edit)
 
 Q. What's the result?
 
@@ -719,14 +717,18 @@ A.
 8
 ```
 
-[JSBin](http://jsbin.com/sugewu/1/edit)
+[JSBin](http://jsbin.com/sugewu/1/edit) | [JSBin explained](http://jsbin.com/disuzo/1/edit)
 
 
 Q. What's the result? (assuming window scope)
 
 ```javascript
-var declared = 1;
-Object.getOwnPropertyDescriptor(window, 'declared').configurable;
+var a = 1;
+b = 1;
+
+var result = (function() {
+  return (delete window.a) === (delete window.b);
+})();
 ```
 
 A.
@@ -735,18 +737,7 @@ A.
 false
 ```
 
-Q. What's the result? (assuming window scope)
-
-```javascript
-declared = 1;
-Object.getOwnPropertyDescriptor(window, 'declared').configurable;
-```
-
-A.
-
-```javascript
-true
-```
+[JSBin](http://jsbin.com/cowoji/1/edit) | [JSBin explained](http://jsbin.com/ceriwu/1/edit)
 
 ### Weird parts of JavaScript
 
