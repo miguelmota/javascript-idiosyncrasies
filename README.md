@@ -484,15 +484,13 @@ A.
 ReferenceError: g is not defined
 ```
 
-[JSBin](http://jsbin.com/pibob/1/edit)
+[JSBin](http://jsbin.com/pibob/1/edit) | [JSBin explained](http://jsbin.com/lusuc/1/edit)
 
 Q. What's the result?
 
 ```javascript
 (function() {
-
   return void (1+1);
-
 })();
 ```
 
@@ -502,7 +500,7 @@ A.
 undefined
 ```
 
-[JSBin](http://jsbin.com/cawiro/1/edit)
+[JSBin](http://jsbin.com/cawiro/1/edit) | [JSBin explained](http://jsbin.com/tacet/1/edit)
 
 Q. What's the result?
 
@@ -525,7 +523,7 @@ A.
 false
 ```
 
-[JSBin](http://jsbin.com/kucob/1/edit)
+[JSBin](http://jsbin.com/kucob/1/edit) | [JSBin explained](http://jsbin.com/sidija/1/edit)
 
 Q. What's the result?
 
