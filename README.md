@@ -419,10 +419,7 @@ Q. What's the result?
 
 ```javascript
 (function() {
-    var obj1 = { foo: 'bar' },
-        obj2 = { foo: 'bar' };
-
-    return obj1 === obj2;
+    return {foo: 'bar'} === {foo: 'bar'};
 })();
 ```
 
@@ -433,6 +430,23 @@ false
 ```
 
 [JSBin](http://jsbin.com/dokej/1/edit)| [JSBin explained](http://jsbin.com/kocoma/1/edit)
+
+Q. What's the result?
+
+```javascript
+(function() {
+    for(;;);
+    return 1;
+})();
+```
+
+A.
+
+```javascript
+*Infinite loop*
+```
+
+[JSBin](http://jsbin.com/rerati/1/edit) | [JSBin explained](http://jsbin.com/dukagu/1/edit)
 
 Q. What's the result?
 
@@ -753,6 +767,21 @@ true
 
 [JSBin](http://jsbin.com/yociz/1/edit) | [JSBin explained](http://jsbin.com/jefera/1/edit)
 
+Q. What's the result?
+
+```javascript
+(function(n) {
+    return (Function)('var n = n || 2; return n;')(n);
+})(1);
+```
+
+A.
+
+```javascript
+3
+```
+
+[JSBin](http://jsbin.com/tujig/1/edit) | [JSBin explained](http://jsbin.com/redup/1/edit)
 
 Q. What's the result? (assuming window scope)
 
