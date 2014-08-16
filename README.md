@@ -802,6 +802,27 @@ false
 
 [JSBin](http://jsbin.com/cowoji/1/edit) | [JSBin explained](http://jsbin.com/ceriwu/1/edit)
 
+```javascript
+var result = (function(x) {
+  var isMatch,
+      regex = /[\w]/gi;
+
+
+  isMatch = regex.test(x);
+  isMatch = regex.test(x);
+
+  return isMatch;
+})('a');
+```
+
+A.
+
+```javascript
+false
+```
+
+[JSBin](http://jsbin.com/kulavu/1/edit) | [JSBin explained](http://jsbin.com/hamog/1/edit)
+
 Q. What's the result?
 
 ```
