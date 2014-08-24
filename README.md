@@ -967,6 +967,24 @@ true
 
 [JSBin](http://jsbin.com/mexanu/1/edit) | [JSBin explained](http://jsbin.com/tizagi/2/edit)
 
+Q. What's the result?
+
+```javascript
+(function() {
+  if ([]) {
+    return [] == false;
+  }
+})();
+```
+
+A.
+
+```javascript
+true
+```
+
+[JSBin](http://jsbin.com/cuyer/1/edit)
+
 # License
 
 Released under the MIT License.
