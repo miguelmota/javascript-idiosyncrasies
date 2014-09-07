@@ -965,7 +965,7 @@ A.
 true
 ```
 
-[JSBin](http://jsbin.com/mexanu/1/edit) | [JSBin explained](http://jsbin.com/tizagi/2/edit)
+[JSBin](http://jsbin.com/mexanu/1/edit) | [JSBin explained](http://jsbin.com/tizagi/3/edit)
 
 Q. What's the result?
 
@@ -983,7 +983,7 @@ A.
 true
 ```
 
-[JSBin](http://jsbin.com/cuyer/1/edit)
+[JSBin](http://jsbin.com/cuyer/1/edit) | [JSBin explained](http://jsbin.com/suzev/1/edit)
 
 # License
 
