@@ -1,4 +1,4 @@
-# JavaScript idiosyncrasie, kinda.
+# JavaScript idiosyncrasies, kinda.
 
 This is a growing collection of some JavaScript idiosyncrasies, and a few things that might not be well recognized so I want to make aware.
 
