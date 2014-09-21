@@ -658,7 +658,7 @@ Q. What's the result?
 ```javascript
 (function() {
     return Math.pow(2,1024) === Infinity;
-}();
+})();
 ```
 
 A.
