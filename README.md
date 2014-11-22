@@ -2,7 +2,7 @@
 
 This is a growing collection of some JavaScript idiosyncrasies, and a few things that might not be well recognized so I want to make aware.
 
-Some of these are just to confuse the reader, and by no means encourage best practices and should never be seen in production code. It's simply to demonstrate the *good* and *bad* parts of JavaScript.
+Some of these are just to confuse the reader, and by no means encourage best practices and should never be seen in production code. It's simply to demonstrate the *weird* parts of JavaScript.
 
 ---
 
@@ -781,7 +781,7 @@ A.
 2
 ```
 
-[JSBin](http://jsbin.com/tujig/1/edit) | [JSBin explained](http://jsbin.com/redup/1/edit)
+[JSBin](http://jsbin.com/tujig/1/edit) | [JSBin explained](http://jsbin.com/redup/2/edit)
 
 Q. What's the result? (assuming window scope)
 
@@ -807,11 +807,7 @@ var result = (function(x) {
   var isMatch,
       regex = /[\w]/gi;
 
-
-  isMatch = regex.test(x);
-  isMatch = regex.test(x);
-
-  return isMatch;
+  return (regex.test(x) === regex.test(x));
 })('a');
 ```
 
@@ -821,7 +817,7 @@ A.
 false
 ```
 
-[JSBin](http://jsbin.com/kulavu/1/edit) | [JSBin explained](http://jsbin.com/hamog/1/edit)
+[JSBin](http://jsbin.com/kulavu/2/edit) | [JSBin explained](http://jsbin.com/hamog/1/edit)
 
 Q. What's the result?
 
@@ -984,6 +980,124 @@ true
 ```
 
 [JSBin](http://jsbin.com/cuyer/1/edit) | [JSBin explained](http://jsbin.com/suzev/1/edit)
+
+Q. What's the result?
+
+```javascript
+(function() {
+  return ''.concat(null);
+})();
+```
+
+A.
+
+```javascript
+"null"
+```
+
+[JSBin](http://jsbin.com/mobaqepetu/1/edit) | [JSBin explained](http://jsbin.com/xiwakihaxa/1/edit)
+
+Q. What's the result?
+
+```javascript
+var result = (function(a, b) {
+  return a + + b;
+})('a','b');
+```
+
+A.
+
+```javascript
+"aNaN"
+```
+
+[JSBin](http://jsbin.com/wenifelaco/1/edit) | [JSBin explained](http://jsbin.com/bivuzupaje/1/edit)
+
+Q. What's the result?
+
+```javascript
+var result = (function() {
+  Object.prototype.foo = 'foo';
+
+  return foo;
+})();
+```
+
+A.
+
+```javascript
+"foo"
+```
+
+[JSBin](http://jsbin.com/jogeroluru/1/edit) | [JSBin explained](http://jsbin.com/wajumigoru/1/edit)
+
+Q. What's the result?
+
+```javascript
+var result = (function() {
+  return 1000 === 1e3;
+})();
+```
+
+A.
+
+```javascript
+true
+```
+
+[JSBin](http://jsbin.com/xafixizapo/1/edit) | [JSBin explained](http://jsbin.com/zigozeheti/1/edit)
+
+Q. What's the result?
+
+```javascript
+var result = (function() {
+  return 9999999999999999;
+})();
+```
+
+A.
+
+```javascript
+10000000000000000
+```
+
+[JSBin](http://jsbin.com/detarakare/1/edit) | [JSBin explained](http://jsbin.com/bisinayicu/1/edit)
+
+Q. What's the result?
+
+```javascript
+var result = (function() {
+  (function() {
+    var a = b = 1;
+  })();
+
+  return typeof a === typeof b;
+})();
+```
+
+A.
+
+```javascript
+false
+```
+
+[JSBin](http://jsbin.com/rudokoqiza/1/edit) | [JSBin explained](http://jsbin.com/qubokakuga/1/edit)
+
+Q. What's the result?
+
+```javascript
+var result = (function() {
+  return Array(3).map(function(o) { return 'a'; });
+})();
+```
+
+A.
+
+```javascript
+[undefined, undefined, undefined]
+```
+
+[JSBin](http://jsbin.com/nafuhuyeka/1/edit?html,js,console) | [JSBin explained](http://jsbin.com/pamafoxuto/1/edit)
 
 # License
 
