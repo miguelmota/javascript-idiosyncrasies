@@ -789,7 +789,7 @@ Q. What's the result? (assuming window scope)
 var a = 1;
 b = 1;
 
-var result = (function() {
+(function() {
   return (delete window.a) === (delete window.b);
 })();
 ```
@@ -803,7 +803,7 @@ false
 [JSBin](http://jsbin.com/cowoji/1/edit) | [JSBin explained](http://jsbin.com/ceriwu/1/edit)
 
 ```javascript
-var result = (function(x) {
+(function(x) {
   var isMatch,
       regex = /[\w]/gi;
 
@@ -1000,7 +1000,7 @@ A.
 Q. What's the result?
 
 ```javascript
-var result = (function(a, b) {
+(function(a, b) {
   return a + + b;
 })('a','b');
 ```
@@ -1016,7 +1016,7 @@ A.
 Q. What's the result?
 
 ```javascript
-var result = (function() {
+(function() {
   Object.prototype.foo = 'foo';
 
   return foo;
@@ -1034,7 +1034,7 @@ A.
 Q. What's the result?
 
 ```javascript
-var result = (function() {
+(function() {
   return 1000 === 1e3;
 })();
 ```
@@ -1050,7 +1050,7 @@ true
 Q. What's the result?
 
 ```javascript
-var result = (function() {
+(function() {
   return 9999999999999999;
 })();
 ```
@@ -1066,7 +1066,7 @@ A.
 Q. What's the result?
 
 ```javascript
-var result = (function() {
+(function() {
   (function() {
     var a = b = 1;
   })();
@@ -1086,7 +1086,7 @@ false
 Q. What's the result?
 
 ```javascript
-var result = (function() {
+(function() {
   return Array(3).map(function(o) { return 'a'; });
 })();
 ```
@@ -1098,6 +1098,124 @@ A.
 ```
 
 [JSBin](http://jsbin.com/nafuhuyeka/1/edit?html,js,console) | [JSBin explained](http://jsbin.com/pamafoxuto/1/edit)
+
+Q. What's the result?
+
+```javascript
+(function() {
+  var foo = [0,1,2];
+  foo[10] = 10;
+  return foo.filter(function(n) { return n === undefined; });
+})();
+```
+
+A.
+
+```javascript
+[]
+```
+
+[JSBin](http://jsbin.com/taqewiside/1/edit) | [JSBin explained](http://jsbin.com/sokatasosu/1/edit)
+
+Q. What's the result?
+
+```javascript
+(function(x) {
+  var ret = null;
+
+  switch(x) {
+    case 'A':
+        ret = 'A';
+        break;
+    default:
+        ret = 'unknown';
+        break;
+  }
+
+  return ret;
+})(new String('A'));
+```
+
+A.
+
+```javascript
+"unknown"
+```
+
+[JSBin](http://jsbin.com/zawezozepe/1/edit) | [JSBin explained](http://jsbin.com/leyaqamuru/1/edit?html,js,consol:w
+jke)
+
+Q. What's the result?
+
+```javascript
+(function() {
+  var x = {};
+
+  return x.prototype === Object.getPrototypeOf(x);
+})();
+```
+
+A.
+
+```javascript
+false
+```
+
+[JSBin](http://jsbin.com/fokomolova/1/edit) | [JSBin explained](http://jsbin.com/coxakaxiwu/1/edit?html,js,console)
+
+Q. What's the result?
+
+```javascript
+(function() {
+  function foo() {}
+  foo.name = 'bar';
+
+  return foo.name;
+})();
+```
+
+A.
+
+```javascript
+"foo"
+```
+
+[JSBin](http://jsbin.com/bequxifegi/1/edit) | [JSBin explained](http://jsbin.com/zenipunohi/1/edit)
+
+Q. What's the result?
+
+```javascript
+(function() {
+  function foo() {}
+  foo.name = 'bar';
+
+  return foo.name;
+})();
+```
+
+A.
+
+```javascript
+"foo"
+```
+
+[JSBin](http://jsbin.com/bequxifegi/1/edit) | [JSBin explained](http://jsbin.com/zenipunohi/1/edit)
+
+Q. What's the result?
+
+```javascript
+(function() {
+  return Array(5).join(',').length;
+})();
+```
+
+A.
+
+```javascript
+4
+```
+
+[JSBin](http://jsbin.com/cabalutozu/1/edit) | [JSBin explained](http://jsbin.com/yewopuxohi/1/edit)
 
 # License
 
