@@ -570,7 +570,7 @@ A.
 undefined
 ```
 
-[JSBin](http://jsbin.com/kesori/1/edit) | [JSBin explained](http://jsbin.com/zabat/1/edit)
+[JSBin](http://jsbin.com/pufaqiwuri/1/edit) | [JSBin explained](http://jsbin.com/zabat/1/edit)
 
 Q. What's the result?
 
