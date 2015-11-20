@@ -865,7 +865,7 @@ A.
 undefined
 ```
 
-[JSBin](http://jsbin.com/vetiba/1/edit) | [JSBin explained](http://jsbin.com/kojiv/1/edit)
+[JSBin](http://jsbin.com/vetiba/1/edit) | [JSBin explained](http://jsbin.com/dipedereti/edit)
 
 Q. What's the result?
 
