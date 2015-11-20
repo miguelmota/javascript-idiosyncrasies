@@ -1,8 +1,7 @@
-# JavaScript idiosyncrasies, kinda.
+# JavaScript idiosyncrasies
 
-This is a growing collection of some JavaScript idiosyncrasies, and a few things that might not be well recognized so I want to make aware.
-
-Some of these are just to confuse the reader, and by no means encourage best practices and should never be seen in production code. It's simply to demonstrate the *weird* parts of JavaScript.
+This is a collection of things in JavaScript that not be well recognized, espcially to beginners.
+Disclaimer: Some of these snippets are simply to demonstrate the *quirky* parts of JavaScript and by no means encourage best practices and should never be seen in production code.
 
 ---
 
@@ -1216,6 +1215,29 @@ A.
 ```
 
 [JSBin](http://jsbin.com/cabalutozu/1/edit) | [JSBin explained](http://jsbin.com/yewopuxohi/1/edit)
+
+---
+
+ES6 examples in Node.js
+
+Q. What's the result?
+
+```javascript
+(function() {
+  'use strict';
+
+  let type = typeof foo;
+  let foo = 1;
+
+  return type;
+})();
+```
+
+A.
+
+```javascript
+ReferenceError: foo is not defined
+```
 
 # License
 
