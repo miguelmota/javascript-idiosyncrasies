@@ -1,6 +1,6 @@
 # JavaScript idiosyncrasies
 
-This is a collection of things in JavaScript that not be well recognized, espcially to beginners.
+This is a collection of things in JavaScript that may not be well recognized, espcially to beginners.
 
 Disclaimer: Some of these snippets are simply to demonstrate the *quirky* parts of JavaScript and by no means encourage best practices and should never be seen in production code.
 
