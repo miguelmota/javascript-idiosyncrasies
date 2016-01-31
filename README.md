@@ -1186,25 +1186,6 @@ Q. What's the result?
 
 ```javascript
 (function() {
-  function foo() {}
-  foo.name = 'bar';
-
-  return foo.name;
-})();
-```
-
-A.
-
-```javascript
-"foo"
-```
-
-[JSBin](http://jsbin.com/bequxifegi/1/edit) | [JSBin explained](http://jsbin.com/zenipunohi/1/edit)
-
-Q. What's the result?
-
-```javascript
-(function() {
   return Array(5).join(',').length;
 })();
 ```
