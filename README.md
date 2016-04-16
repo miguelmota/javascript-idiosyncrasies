@@ -1221,6 +1221,28 @@ A.
 ReferenceError: foo is not defined
 ```
 
+---
+
+
+
+Q. What's the result?
+
+```javascript
+(function() {
+  'use strict';
+
+  var a = 2;
+  return a++ + (--a * ++a);
+
+})();
+```
+
+A.
+
+```javascript
+8
+```
+
 # License
 
 Released under the MIT License.
