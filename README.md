@@ -1243,6 +1243,8 @@ A.
 8
 ```
 
+[JSBin](http://jsbin.com/lawupekupa/edit)
+
 # License
 
 Released under the MIT License.
