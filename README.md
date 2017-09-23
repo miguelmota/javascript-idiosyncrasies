@@ -1198,9 +1198,23 @@ A.
 
 [JSBin](http://jsbin.com/cabalutozu/1/edit) | [JSBin explained](http://jsbin.com/yewopuxohi/1/edit)
 
----
 
-ES6 examples in Node.js
+Q. What's the result?
+
+```javascript
+(function(x) {
+  return x++ + ++x;
+})(2);
+```
+
+A.
+
+```javascript
+6
+```
+
+[JSBin](https://jsbin.com/laqebotenu/edit?js,console) | [JSBin explained](https://jsbin.com/tukutofimi/edit?js,console)
+
 
 Q. What's the result?
 
@@ -1222,28 +1236,6 @@ ReferenceError: foo is not defined
 ```
 
 ---
-
-
-
-Q. What's the result?
-
-```javascript
-(function() {
-  'use strict';
-
-  var a = 2;
-  return a++ + (--a * ++a);
-
-})();
-```
-
-A.
-
-```javascript
-8
-```
-
-[JSBin](http://jsbin.com/lawupekupa/edit)
 
 # License
 
