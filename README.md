@@ -1,10 +1,22 @@
+<h3 align="center">
+  <br />
+  <img src="https://user-images.githubusercontent.com/168240/51433988-e04f7600-1c0c-11e9-9b06-217d668dcc79.png" alt="logo" width="700" />
+  <br />
+  <br />
+  <br />
+</h3>
+
 # JavaScript idiosyncrasies
 
-This is a collection of things in JavaScript that may not be well recognized, espcially to beginners.
+> This is a collection of things in JavaScript that may not be well recognized, espcially to beginners.
+
+[![License](http://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/miguelmota/javascript-idiosyncrasies/master/LICENSE)
 
 Disclaimer: Some of these snippets are simply to demonstrate the *quirky* parts of JavaScript and by no means encourage best practices and should never be seen in production code.
 
 ---
+
+In no particular order:
 
 Q. What's the result?
 
@@ -1237,6 +1249,6 @@ ReferenceError: foo is not defined
 
 ---
 
-# License
+## License
 
-Released under the MIT License.
+[MIT](LICENSE)
